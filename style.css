@@ -5,20 +5,41 @@
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: 'MyFutura';
+    src: url('./fonts/Futura-Bol.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyFutura';
+    src: url('./fonts/Futura-Boo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyFutura';
+    src: url('./fonts/Futura-BooObl.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     color: #333333;
 }
 
 section {
-    padding: 60px 0; 
+    padding: 90px 0; 
     display: block;
 }
 
 section h2 {
-    margin: 40px 0;
+    margin: 40px 0 50px 0;
     color: #3D5CDB;
-    font-family: 'Futura';
+    font-family: 'MyFutura', sans-serif;
     font-weight: bold;
     text-align: center;
     font-size: 56px;
@@ -38,6 +59,7 @@ header {
     height: 100vh; 
     background-size: cover;
     background-position: center;
+    background-image: url(images/background1.jpg);
     overflow: hidden;
     background-color: #000;
     display: flex;
@@ -48,31 +70,36 @@ header {
 
 nav {
     position: absolute;
-    top: 20px;
-    right: 40px;
+    top: 0;
     width: 100%;
-    font-family: 'Futura', 'Century Gothic', sans-serif;
+    padding: 30px 50px;
+    justify-content: flex-end;
+    font-family: 'MyFutura', sans-serif;
+    margin-right: 20px;
 }
 
 nav ul {
     display: flex;
     list-style: none;
     justify-content: flex-end;
-    gap: 20px;
+    gap: 27px;
     margin: 0;
     padding: 0;
+}
+
+nav ul li {
+    padding-top: 10px;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease; 
-    letter-spacing: 1px;
     font-size: 24px;
 }
 
 nav ul li a:hover {
-    color: #3366ff;
+    color: #3D5CDB;
 }
 
 .title {
@@ -86,7 +113,7 @@ nav ul li a:hover {
 }
 
 .title h1 {
-    margin: 0 0 10px 0; 
+    margin: 0 0 20px 0; 
 }
 
 .title h1 img {
@@ -97,11 +124,10 @@ nav ul li a:hover {
 
 .title p {
     color: #ffffff;
-    font-size: 36px;
+    font-size: 48px;
     font-weight: bold;
     margin: 0;
-    letter-spacing: 0.1em;
-    font-family: 'Futura';
+    font-family: 'MyFutura', sans-serif;
     font-style: italic;
     font-weight: lighter;
 }
@@ -115,37 +141,46 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     max-width: 1000px;
-    margin: 0 auto 40px auto; 
+    margin: 0 auto 65px auto; 
     padding: 0 20px;
 }
 
 .content-row img {
     width: 48%;
     height: auto;
+    object-fit: cover;
 }
 
 .box {
-    width: 48%;
+    width: 500px;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .box p {
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 32px;
+    font-size: 16px;
+    margin-bottom: 29px;
+    padding: 0 20px;
     display: block;
-    font-family: 'Futura';
+    text-align: left;
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "HGS明朝E", "MS P明朝", "MS PMincho", serif;
+    line-height: 1.8;
 }
 
 .intro-button {
     display: block;
-    max-width: 160px;
+    width: 170px;
     color: #ffffff;
     text-decoration: none;
-    padding: 10px 30px;
-    border-radius: 5px;
+    padding: 5px 0;
+    border-radius: 10px;
     transition: box-shadow 0.3s ease;
     text-align: center;
-    font-family: 'Futura';
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "HGS明朝E", "MS P明朝", "MS PMincho", serif;
     margin: 0 auto;
+    font-size: 20px;
 }
 
 .content-row:nth-of-type(1) .intro-button {
@@ -168,6 +203,7 @@ nav ul li a:hover {
     z-index: 1;
     overflow: hidden;
 }
+
 #particles-js {
     position: absolute; 
     top: 0;
@@ -183,8 +219,8 @@ nav ul li a:hover {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto 50px;
+    max-width: 1060px;
+    margin: 0 auto 20px;
     padding: 0 20px;
     position: relative; 
     z-index: 1;
@@ -193,45 +229,50 @@ nav ul li a:hover {
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; 
     align-items: center;
     width: 240px;
-    height: 340px;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(106, 137, 152, 0.2);
+    height: 320px; 
+    padding-top: 30px;
+    border-radius: 10px;
     background-color: #ffffff;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
+.card:hover {
+    transform: translateY(-5px); 
+}
+
+
 .card img {
-    max-width: 120px;
-    width: 100%;
-    height: 120px;
-    margin: 0 auto;
+    width: 80px;
+    height: 140px;
+    margin-bottom: 20px;
     object-fit: contain; 
 }
 
 .card p {
-    font-size: 18px;
-    font-family: 'Futura', sans-serif;
-    color: #032145;
-    margin: 0; 
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    line-height: 20px;
+    margin-bottom: 10px;
 }
 
 
 .course-button {
-    display: block; 
-    text-align: center;
+    width: 150px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 36px;
     color: #ffffff;
+    border-radius: 8px;
+    text-align: center;
     text-decoration: none;
-    padding: 12px 0;
-    border-radius: 5px;
-    transition: opacity 0.3s ease;
-    font-family: 'Futura', sans-serif;
-    width: 100%; 
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease;
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "HGS明朝E", "MS P明朝", "MS PMincho", serif;
 }
-
 
 .card:nth-of-type(1) .course-button { background-color: #e34f26; }
 .card:nth-of-type(2) .course-button { background-color: #1572b6; }
@@ -240,7 +281,6 @@ nav ul li a:hover {
 .card:nth-of-type(5) .course-button { background-color: #f7df1e; }
 .card:nth-of-type(6) .course-button { background-color: #f05138; }
 .card:nth-of-type(7) .course-button { background-color: #00add8; }
-
 
 .slider {
     width: 80%; 
@@ -254,62 +294,45 @@ nav ul li a:hover {
     
 }
 
-.slick-prev,
-.slick-next {
-    width: 45px;   
-    height: 45px;     
-    background-color: #444444; 
+.slick-prev, .slick-next {
+    width: 30px;
+    height: 30px;
+    background-color: #333; 
     border-radius: 50%; 
-    z-index: 1;   
-    margin-top: -22.5px; 
+    z-index: 10;
 }
 
-.slick-prev:before,
-.slick-next:before {
-    font-size: 24px;  
-    color: #ffffff;  
-    line-height: 45px; 
-    display: block; 
+.slick-prev::before, .slick-next::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #ffffff;  
+    border-right: 2px solid #ffffff;
+    position: absolute;
+    top: 10px;
 }
 
-.slick-prev {
-    left: -60px;
+.slick-prev { left: -40px; }
+.slick-prev::before { 
+    left: 12px; 
+    transform: rotate(-135deg); 
 }
-.slick-next {
-    right: -60px;
+
+.slick-next { right: -40px; }
+.slick-next::before { 
+    right: 12px; 
+    transform: rotate(45deg); 
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-    background-color: #444444;
+    background: #555;
     opacity: 1;
 }
 
-.slick-dots li {
-    width: 30px;
-    height: 30px;
-    margin: 0 8px; 
-}
-.slick-dots li button {
-    width: 30px;
-    height: 30px;
-    padding: 5px; 
-}
-
 .slick-dots li button:before {
-    font-size: 18px;   
-    line-height: 30px; 
-    color: #999999;   
-    opacity: 1;        
-}
-
-.slick-dots li.slick-active button:before {
-    color: #444444; 
-}
-
-
-.slick-dots {
-    bottom: -50px; 
+    font-size: 20px;
 }
 
 
@@ -338,49 +361,58 @@ footer small {
     font-size: 14px;
 }
 
-@media screen and (max-width: 768px) {
-    section {
-        padding: 20px; 
-    }
+@media screen and (max-width: 1080px) {
     .content-row {
         flex-direction: column; 
+        gap: 30px;
     }
     
     .content-row img {
-        width: 100%;
-        margin-bottom: 20px;
-        order: 1;
+        width: 80%;
     }
     
     .box {
-        width: 100%;
-        margin-bottom: 20px;
-        order: 2; 
+        width: 80%;
     }
+
+    .content-row:nth-of-type(2) {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    nav {
+        display: none; 
+    }
+
+    .title p {
+        font-size: 24px;
+    }
+
     .card {
-        width: 45%; 
-        min-width: 150px; 
-        height: 230px; 
-        margin-top: 10px;
-        padding: 15px 10px;
+        width: 160px;
+        height: 200px;
+        padding-top: 15px;
     }
     
     .card img {
-        max-width: 80px;
-        height: 80px;
-        margin: 0 auto 10px; 
+        width: 50px;
+        height: 60px;
     }
     
     .card p {
-        font-size: 15px; 
-        margin-bottom: 10px;
+        font-size: 13px; 
+        margin-bottom: 5px;
     }
 
     .course-button {
-        font-size: 12px; 
-        padding: 8px 0; 
-        border-radius: 30px; 
-        width: 90%; 
-        margin: auto auto 0 auto; 
+        width: 130px;
+        line-height: 30px;
+        margin-top: auto;
+        margin-bottom: 10px;
+    }
+
+    .slider {
+        width: 85%;
     }
 }
