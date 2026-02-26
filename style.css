@@ -26,183 +26,172 @@
     font-style: italic;
 }
 
-body {
-    font-family: sans-serif;
-}
-
-section {
-    padding: 90px 0; 
-    display: block;
-}
-
-section h2 {
-    margin: 40px 0 50px 0;
-    color: #3D5CDB;
-    font-family: 'MyFutura', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    font-size: 56px;
-    line-height: 1.5;
-}
-
-.fadein {
-    position: relatie;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: 0.5s all ease-in-out;
-    transition-delay: 0.3s;
-}
-
-header {
-    position: relative; 
-    height: 100vh; 
-    background-size: cover;
-    background-position: center;
+header{
+    width: 100vw;
+    height: 100vh;
     background-image: url(images/background1.jpg);
-    overflow: hidden;
-    background-color: #000;
+    background-position: center center;
+    background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
+    flex-direction: column;
+    position: relative;
+    color: #ffffff;
+    font-family: 'MyFutura';
 }
 
 nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 50px;
     position: absolute;
     top: 0;
-    width: 100%;
-    padding: 30px 50px;
-    justify-content: flex-end;
-    font-family: 'MyFutura', sans-serif;
-    margin-right: 20px;
+    width: 100%;    
 }
 
-nav ul {
+nav ul{
     display: flex;
-    list-style: none;
-    justify-content: flex-end;
-    gap: 27px;
-    margin: 0;
-    padding: 0;
 }
 
-nav ul li {
+nav li{
+    list-style: none;
+    margin-right: 27px;
     padding-top: 10px;
 }
 
-nav ul li a {
+nav a{
+    font-size: 24px; 
     color: #ffffff;
     text-decoration: none;
-    transition: color 0.3s ease; 
-    font-size: 24px;
+    transition: color 0.5s ease;
 }
 
-nav ul li a:hover {
-    color: #3D5CDB;
+nav a:hover {
+    color: royalblue;
 }
 
 .title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    width: 100%;
-    max-width: 800px;
-    text-align: center; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
 }
 
-.title h1 {
-    margin: 0 0 20px 0; 
-}
-
-.title h1 img {
-    width: 100%;
-    max-width: 900px;
-    height: auto;
+h1 img{
+    height: 240px;
+    text-align: center;
 }
 
 .title p {
-    color: #ffffff;
-    font-size: 48px;
-    font-weight: bold;
-    margin: 0;
-    font-family: 'MyFutura', sans-serif;
+    text-align: center;
+    font-size: 45px;
     font-style: italic;
-    font-weight: lighter;
+    color: #ffffff;
+    margin-top: 18px;
 }
 
 #introduction {
+    text-align: center;
     background-color: #ffffff;
+    padding: 90px 0;
 }
 
-.content-row {
+.container h2{
+    font-size: 56px;
+    font-weight: bold;
+    text-align: center;
+    color: #2e5cf5;
+    margin-bottom: 30px;
+    font-family: 'MyFutura';
+}
+
+.fadein{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}
+
+.container {
+    width: 100%;
+    padding: 20px auto;
+    margin: 0 auto;
+    max-width: 1280px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    max-width: 1000px;
-    margin: 0 auto 65px auto; 
-    padding: 0 20px;
-    gap: 40px;
 }
 
-.content-row img {
-    width: 480px; 
-    max-width: 100%;
-    height: auto;
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    row-gap: 65px;
+}
+
+.content-row{
+    display: flex;
+}
+
+.content-row img{
+    max-width: 500px;
+    max-height: 330px;
     object-fit: cover;
 }
 
-.box {
-    width: 480px;
-    display: flex;
+.box {    
+    display: flex;  
     flex-direction: column;
-    align-items: center;
-    font-family: initial;
+    align-items: center; 
+    width: 500px;
 }
 
-.box p {
+.box p{
     line-height: 32px;
     font-size: 16px;
-    margin-bottom: 29px;
-    display: block;
+    color: #000000;
     text-align: left;
-    line-height: 1.8;
-    font-weight: 250;
+    margin-bottom: 29px;
+    padding: 20px 20px;
+    margin: 0 30px;
+    font-family: inherit;
 }
 
-.intro-button {
-    display: block;
-    width: 170px;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 5px 0;
-    border-radius: 10px;
-    transition: box-shadow 0.3s ease;
-    text-align: center;
-    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "HGS明朝E", "MS P明朝", "MS PMincho", serif;
-    margin: 0 auto;
+.text1 {
+    padding-top: 10px;
+}
+
+.box a {
+    width:170px;
     font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+    color: #ffffff;
+    border-radius: 12px;
+    text-decoration: none;
+} 
+
+.intro-button1{
+    background-color:royalblue;
 }
 
-.content-row:nth-of-type(1) .intro-button {
-    background-color: #007bff; 
-    color: #ffffff; 
-}
-  
-.content-row:nth-of-type(2) .intro-button {
-    background-color: #ffc107; 
-    color: #ffffff; 
+.intro-button2{
+    background-color:rgb(255, 199, 31);
 }
 
-.intro-button:hover {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+.intro-button1 .intro-button2 a:hover {
+    box-shadow: 10px 10px 10px #000000;
 }
+
+.box a:hover {
+    box-shadow: 0 0 10px #20200060;
+}
+
 
 #courses {
-    background-color: rgba(186, 213, 245, 0.6); 
+    text-align: center;
+    background-size: cover;
+    padding: 70px 10px;
     position: relative;
-    z-index: 1;
-    overflow: hidden;
 }
 
 #particles-js {
@@ -210,281 +199,260 @@ nav ul li a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 0; 
+    height: 100%; 
+    z-index: -1;   
+    background-color: #aecaff80; 
 }
 
 .course-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
     flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1020px;
-    margin: 0 auto 20px;
-    position: relative; 
-    z-index: 1;
+    align-items: center;
+    row-gap: 20px;
+    column-gap: 20px;
+    max-width: 1040px;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 240px;
-    height: 320px; 
-    padding-top: 30px;
-    border-radius: 10px;
+    height: 340px;
     background-color: #ffffff;
-    text-align: center;
-    transition: transform 0.3s ease;
-    flex: 0 0 240px;
+    border-radius: 10px;
+    display: flex;  
+    flex-direction: column;
+    align-items: center; 
+    padding-top: 40px;
 }
 
-.card:hover {
-    transform: translateY(-5px); 
-}
-
-
-.card img {
-    width: 80px;
-    height: 140px;
-    margin-bottom: 20px;
+.card img{
+    max-width: 100px;  
+    max-height: 120px; 
+    height: 100px; 
     object-fit: contain; 
+    margin-top: 20px; 
+    margin-bottom: 30px;
 }
 
-.card p {
+.card p{
     font-size: 15px;
     font-weight: bold;
     color: #000000;
     line-height: 20px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
-
-.course-button {
-    width: 150px;
-    font-size: 12px;
+.card a{
+    width: 180px;
+    font-size: 14px;
     font-weight: bold;
-    line-height: 36px;
+    line-height: 40px;
     color: #ffffff;
-    border-radius: 8px;
+    border-radius: 10px;
     text-align: center;
     text-decoration: none;
     margin-top: 20px;
-    transition: box-shadow 0.3s ease;
-    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "HGS明朝E", "MS P明朝", "MS PMincho", serif;
 }
 
-.card:nth-of-type(1) .course-button { background-color: #e34f26; }
-.card:nth-of-type(2) .course-button { background-color: #1572b6; }
-.card:nth-of-type(3) .course-button { background-color: #222c37; }
-.card:nth-of-type(4) .course-button { background-color: #cc342d; }
-.card:nth-of-type(5) .course-button { background-color: #f7df1e; }
-.card:nth-of-type(6) .course-button { background-color: #f05138; }
-.card:nth-of-type(7) .course-button { background-color: #00add8; }
+.card:nth-of-type(1) .course-button { background-color: coral; }
+.card:nth-of-type(2) .course-button { background-color: rgb(101, 182, 233); }
+.card:nth-of-type(3) .course-button { background-color: black; }
+.card:nth-of-type(4) .course-button { background-color: red; }
+.card:nth-of-type(5) .course-button { background-color: gold; }
+.card:nth-of-type(6) .course-button { background-color: rgb(255, 114, 67); }
+.card:nth-of-type(7) .course-button { background-color: mediumturquoise; }
+
+
+.course-list a:hover {
+    box-shadow: 0 0 10px #20200060;
+}
+
+#images {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
 
 .slider {
-    width: 80%; 
-    margin: 30px auto; 
-    
+    width: 88%;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .slider img {
     width: 100%;
     height: auto;
-    
+    object-fit: cover;
 }
 
 .slick-prev, .slick-next {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: #333; 
-    border-radius: 50%; 
+    border-radius: 50%;     
     z-index: 10;
 }
 
 .slick-prev::before, .slick-next::before {
     content: '';
     display: block;
-    width: 8px;
-    height: 8px;
-    border-top: 2px solid #ffffff;  
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #ffffff;   
     border-right: 2px solid #ffffff;
     position: absolute;
-    top: 10px;
-}
-
-.slick-prev { left: -40px; }
-.slick-prev::before { 
-    left: 12px; 
-    transform: rotate(-135deg); 
-}
-
-.slick-next { right: -40px; }
-.slick-next::before { 
-    right: 12px; 
-    transform: rotate(45deg); 
+    top: 6px;
 }
 
 .slick-prev:hover,
-.slick-next:hover {
-    background: #555;
-    opacity: 1;
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+    opacity: 1;    
+    background: #333; 
+    border-radius: 50%;  
 }
+
+
+
+.slick-prev { left: -30px; }
+.slick-prev::before { 
+    left: 8px; 
+    transform: rotate(-135deg); }
+
+
+.slick-next { right: -30px; }
+.slick-next::before { 
+    right: 8px; 
+    transform: rotate(45deg); }
 
 .slick-dots li button:before {
-    font-size: 20px;
+    font-size: 30px;
 }
 
-
-.map {
-    text-align: center;
-    width: 100%;
-    max-width: 600px;
-    height: 400px;
-    margin: 0px auto;
-    padding: 0 20px;
-}
-
-.map iframe {
-    width: 100%;
-    height: 400px;
+#access{
+    background-color: #ffffff;
+    padding-bottom: 50px;
 }
 
 footer {
-    background-color: #ffffff;
-    color: #3366ff;
-    text-align: center;
-    padding: 20px 0;
+    height: 40px;
+    font-size: 18px;
+    color: royalblue; 
+    font-family: "MyFutura";
 }
 
-footer small {
-    font-size: 14px;
-}
+@media (max-width: 1080px){
 
-@media screen and (max-width: 1080px) {
-    section h2 {
-        font-size: 48px;
-    }
-    
-    .title p {
-        font-size: 32px;
+    .container h2 {
+        font-size: 42px;
     }
 
-    .title h1 img {
+    .title {
+        text-align: center;
+    }
+
+    h1 img {
         width: 80%;
+        height: auto;
         margin: 0 auto;
     }
 
+    .title p{
+        font-size: 32px;
+
+    }
     .content-row {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
 
-    .content-row img,
-    .box {
-        width: 100%;
-        max-width: 500px;
+    .content-row:nth-child(2) {
+    flex-direction: column-reverse;
     }
-    
 
-    .box p {
+    .box{
+        padding: 0;
+    }
+
+    .box p{
         font-size: 13px;
+        margin: 0;
         line-height: 26px;
-        margin-bottom: 20px;
+
+    }
+    .box a{
+        margin-top: 30px;
     }
 
-    .intro-button {
-        margin-top: 10px;
-    }
-
-    .content-row:nth-of-type(2) {
-        flex-direction: column-reverse;
+    .box p:nth-last-child(2) {
+        margin-top: 20px;
     }
 }
 
-@media screen and (max-width: 780px) {
-    nav {
-        display: none; 
-    }
+@media (max-width: 780px){
 
     .title p {
         font-size: 24px;
     }
 
-    .content-row {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
+    .container h2 {
+        font-size: 48px;
     }
 
-    .box {
-        width: 100%;
-        max-width: 500px;
+    .access-map iframe{
+        width: 100vw;
+        margin: 0 auto;
+    }
+
+    nav {
+        display: none;
     }
 
     .course-list {
-        max-width: 780px; 
+        max-width: 780px;
     }
 
     .card {
-        flex: 0 0 160px;
-        max-width: 160px;
+        width: 160px;
         height: 200px;
+        padding-top: 20px;
     }
-    
+
     .card img {
-        width: 50px;
-        height: 60px;
-    }
-    
-    .card p {
-        font-size: 13px; 
-        margin-bottom: 5px;
-        margin-bottom: 0;
-    }
-
-    .course-button {
-        width: 130px;
-        line-height: 36px;
-        margin-top: auto;
+        width: 70px;
+        height: 80px;
+        object-fit: contain;
+        margin-top: 10px; 
         margin-bottom: 10px;
+
+    }
+    .card p {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 
-    .slider {
-        width: 85%;
-    }
-
-    .slick-prev {
-        left: 10px;
-    }
-
-    .slick-next {
-        right: 10px;
-    }
-
-    .map {
-        width: 100%;
-        max-width: 100%;
-        padding: 0;
-    }
-    
-    .map iframe {
-        width: 100%;
+    .card a{
+        width: 130px;
+        line-height: 32px;
+        font-size: 12px;
+        margin-top: 5px;
     }
 
 }
-
-@media screen and (max-width: 540px) {
-    
-    .content-row img{
-        width: 90%;
-    }
-    .box {
-        width: 90%;
+@media (max-width: 540px){
+    .content-row img {
+        width: 90vw;
+        height: auto;
     }
 
-    .slider {
-        width: 90%;
+    .content-row p {
+        width: 100vw;
+        height: auto;
+    }
+
+    .box p {
+        width: 100vw;
     }
 }
