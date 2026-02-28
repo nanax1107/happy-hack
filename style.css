@@ -96,7 +96,7 @@ h1 img{
 }
 
 .container h2{
-    font-size: 56px;
+    font-size: 48px;
     font-weight: bold;
     text-align: center;
     color: #2e5cf5;
@@ -346,10 +346,6 @@ footer {
 
 @media (max-width: 1080px){
 
-    .container h2 {
-        font-size: 42px;
-    }
-
     .title {
         text-align: center;
     }
@@ -396,10 +392,6 @@ footer {
 
     .title p {
         font-size: 24px;
-    }
-
-    .container h2 {
-        font-size: 48px;
     }
 
     nav {
@@ -463,4 +455,10 @@ footer {
         width: 100vw;
     }
 
+}
+
+@media (max-width: 450px){
+    .container h2{
+        font-size: 34px;
+    }
 }
